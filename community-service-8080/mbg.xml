@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- 简单CURD targetRuntime="MyBatis3Simple" 复杂 targetRuntime="MyBatis3" -->
+<generatorConfiguration>
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<!-- 去除注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 配置数据库连接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/community_db" userId="root"
+			password="1991820">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 指定javaBean生成位置 -->
+		<javaModelGenerator
+			targetPackage="cn.zhangguimin.community.po"
+			targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--指定sql映射文件生成路径xxxMapper.xml -->
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject=".\src\main\resources\mybatis">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 指定dao接口生成位置，mapper接口 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="cn.zhangguimin.community.dao"
+			targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- 指定表生成策略,表对应bean -->
+		<table tableName="user" domainObjectName="UserPo" />
+		<table tableName="channel" domainObjectName="ChannelPo" />
+		<table tableName="comments" domainObjectName="CommentsPo" />
+		<table tableName="config" domainObjectName="ConfigPo" />
+		<table tableName="favors" domainObjectName="FavorsPo" />
+		<table tableName="feeds" domainObjectName="FeedsPo" />
+		<table tableName="follows" domainObjectName="FollowsPo" />
+		<table tableName="logs" domainObjectName="LogsPo" />
+		<table tableName="menu" domainObjectName="MenuPo" />
+		<table tableName="notify" domainObjectName="NotifyPo" />
+		<table tableName="open_oauth" domainObjectName="OpenOauthPo" />
+		<table tableName="posts" domainObjectName="PostsPo" />
+		<table tableName="posts_attribute" domainObjectName="PostsAttributePo" />
+		<table tableName="role" domainObjectName="RolePo" />
+		<table tableName="signin" domainObjectName="SigninPo" />
+		<table tableName="verify" domainObjectName="VerifyPo" />
+	</context>
+</generatorConfiguration>

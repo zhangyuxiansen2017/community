@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  thymeleaf:
+      cache: false
+      mode: LEGACYHTML5
+  mvc:
+    date-format: yyyy-MM-dd HH:mm
+eureka:
+  client: 
+    register-with-eureka: false
+    service-url: 
+       defaultZone: http://localhost:7070/eureka
+#spring.thymeleaf.content-type=text/html
+#spring.thymeleaf.cache=false
+#spring.thymeleaf.mode =LEGACYHTML5 LEGACYHTML5

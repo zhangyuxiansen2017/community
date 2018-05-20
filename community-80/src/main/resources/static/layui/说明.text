@@ -1,0 +1,49 @@
+api说明
+
+index.js
+发布帖子 上传图片url:/api/upload/
+        参数：
+        json:{"status":0,"data":[{'url':'返回上传地址','msg':''}]}
+
+新消息通知 请求url:/message/nums/
+        参数：_
+        json:{"states":"0","count":"1"}
+签到
+    初始化url:/sign/status
+        参数:
+        json:{status: 0, data: {days: 1, experience: 5, signed: true}}
+    签到url：/sign/in
+        参数:token: signRender.token || 1
+        json:{status: 0, data: {days: 1, experience: 5, signed: true}}
+
+    活跃榜url:/top/signin
+        参数:
+        json:{"status":0,"data":[{"uid":2098488,"days":2,"time":"2018-05-19T17:14:15.000Z","msec":1526,"token":"dc6","info":"{\"ip\":\"222.84.235.16\",\"type\":\"\"}",
+                                     "user":{"username":"丹麦面包不单卖","avatar":"5.jpg"}},
+                          {"uid":12157488,"days":1,"time":"2018-05-19T17:11:36.000Z","msec":15267,"token":"3c25","info":"{\"ip\":\"125.71.154.206\",\"type\":\"\"}",
+                            "user":{"username":"章鱼先森cd","avatar":"10.jpg"}},
+                          {"uid":2699592,"days":213,"time":"2018-05-19T17:01:25.000Z","msec":1526,"token":"9601c","info":"{\"ip\":\"112.64.61.182\",\"type\":\"\"}",
+                            "user":{"username":"孤独木木","avatar":"http://"}}]}
+回帖榜 url:/top/reply/
+        参数:limit: 20
+        json:{"status":0,"data":[{"uid":6497232,"count(*)":195,
+                                    "user":{"username":"岁月小偷","avatar":"/1"}},
+                                {"uid":4853856,"count(*)":31,
+                                    "user":{"username":"Minhat","avatar":"/0"}}]}
+user.js
+
+激活邮件 url:/api/activate/
+        参数:
+        json: status:0(激活邮件发送成功)
+修改头像 url:/user/upload/
+        参数:
+        json:{"status":0,"data":[{'url':'返回上传地址','msg':''}]}
+账号绑定 url:/api/unbind
+        参数:type:qq_id: 'QQ',weibo_id: '微博'
+        json:{"status":0,"data":[{'msg':''}]}
+消息阅读后删 url:/message/remove/
+        参数:id: id
+        json:{"status":0}
+清空所有消息 url:/message/remove/
+        参数:all: true
+        json:{"status":0}

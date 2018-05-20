@@ -1,0 +1,21 @@
+2018-05-20 === [restartedMain] === INFO  === c.z.community.SpringBootWebApplication_80 ==== Starting SpringBootWebApplication_80 on SONY-VAIO with PID 3712 (F:\spring\Community\community-80\target\classes started by 贵敏 in F:\spring\Community\community-80)
+2018-05-20 === [restartedMain] === DEBUG === c.z.community.SpringBootWebApplication_80 ==== Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-05-20 === [restartedMain] === INFO  === c.z.community.SpringBootWebApplication_80 ==== No active profile set, falling back to default profiles: default
+2018-05-20 === [restartedMain] === INFO  === o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext ==== Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a4d6858: startup date [Sun May 20 18:35:49 CST 2018]; root of context hierarchy
+2018-05-20 === [restartedMain] === INFO  === o.s.d.r.config.RepositoryConfigurationDelegate ==== Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-20 === [restartedMain] === INFO  === o.s.b.c.e.j.JettyEmbeddedServletContainerFactory ==== Server initialized with port: 8080
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.Server ==== jetty-9.4.7.v20170914
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.session ==== DefaultSessionIdManager workerName=node0
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.session ==== No SessionScavenger set, using defaults
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.session ==== Scavenging every 600000ms
+2018-05-20 === [restartedMain] === INFO  === o.e.j.server.handler.ContextHandler.application ==== Initializing Spring embedded WebApplicationContext
+2018-05-20 === [restartedMain] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2474 ms
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-20 === [restartedMain] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'webStatFilter' to urls: [/*]
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.handler.ContextHandler ==== Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3de4ff64{/,[file:///C:/Users/%E8%B4%B5%E6%95%8F/AppData/Local/Temp/jetty-docbase.1145078566809378433.8080/],AVAILABLE}
+2018-05-20 === [restartedMain] === INFO  === org.eclipse.jetty.server.Server ==== Started @185320ms

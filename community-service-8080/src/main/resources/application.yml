@@ -1,0 +1,54 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: community 
+  datasource:
+    username: root
+    password: 1991820
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/community_db
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+  redis:
+    host: 192.168.30.20
+  mail:
+    host: smtp.qq.com
+    password: qsexemuipkprbjbc
+    username: 291777408@qq.com
+    properties:
+      mail.smtp.ssl.enable: true
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: cn.zhangguimin.community.po
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+logging:
+  file: log/loging.log
+  pattern:
+    console: '%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n'
+    file: '%d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} ==== %msg%n'
+  level:
+    cn.zhangguimin.community: trace
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://localhost:7070/eureka
+      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: community-service-8080
+    prefer-ip-address: true
